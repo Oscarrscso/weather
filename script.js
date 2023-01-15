@@ -7,6 +7,31 @@ let grabBTN = document.getElementById("grab")
 let city = document.getElementById("input")
 let logic = 0
 
+
+city.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+        let datas = document.querySelectorAll(".data")    
+    if (logic == 0){
+        city.style.display = "none"
+        datas.forEach(data =>{
+            data.style.display = "block"
+            })
+                search(city.value)
+                    logic = 1
+                        grabBTN.innerHTML = "Reset"
+    } else {
+        city.style.display = "block"
+        datas.forEach(data =>{
+            data.style.display = "none"
+            })
+            logic = 0
+                city.value = ''
+                    grabBTN.innerHTML = "Reset"
+    }
+    }
+});
+
+
 const search = city =>{
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=aff14ff0dbc9e2ef274eae03fa84a263`).then(response =>{
         return response.json()
@@ -44,13 +69,12 @@ const grab = () =>{
                 city.value = ''
                     grabBTN.innerHTML = "Reset"
     }
-    console.log(logic)
 }
 
 
     grabBTN.onmouseenter = function(){
         if(cityName.innerHTML != "" && currTemp.style.display == "none" && city.value == ''){
-        grabBTN.innerHTML = cityName.innerHTML
+        grabBTN.innerHTML = `↑${cityName.innerHTML}`
     }else
     grabBTN.onmouseleave = function(){
         if(currTemp.style.display == "block"){
