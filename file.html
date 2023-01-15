@@ -1,5 +1,8 @@
 <script src="script.js" defer></script>
 <link href="style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,6 +13,18 @@
     <title>Weather!</title>
 </head>
 <body>
-    <h1>Weather Grab</h1>
+    
+    <div id="gui">
+        <span>
+            <h1>Weather Grabber</h1>
+        </span>
+        <input type="text" name="input" id="input" placeholder="Enter a Location">
+        <h2 id="cityName" class="data"></h2>
+        <span id="cond" class="data"></span>
+        <span id="currTemp" class="data"></span>
+        <span id="feelsLike" class="data"></span>
+        <span id="hum" class="data"></span>
+        <button id="grab" onclick="grab()">Grab</button>
+    </div>
 </body>
 </html>

@@ -1,8 +1,95 @@
 body {
     background-color: #27241d;
-    color: #d3cec4;
+    color: #B8B2A7;
     text-align: center;
-    padding: 40px;
-    font
+    padding: 0px;
+    font-family: 'Jost', sans-serif;
+    border: 1.5px;
+    margin: 0;
+    display: flex;
+}
+
+#gui {
+    margin: auto;
+    width: 400px;
+    height: auto;
+    background-color: #423d33;
+    border: #625D52 solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: ease-in-out 1s;
+}
+
+.data{
+    display: none;
+    margin: 10px 10px 0px 15px;
+    text-align: left;
+    font-size: 15px;
+    color: #E8E6E1;
+}
+
+#cityName {
+    width: fit-content;
+    font-size: 25px;
+    color: #B8B2A7;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background-color: #504A40;
+    border: #625D52 solid;
+    margin-top: 0px;
+}
+
+h1 {
+    padding: 5px 10px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #504A40;
+    border: #625D52 solid;
+}
+
+input {
+    font-family: 'Jost', sans-serif;
+    font-size: 23px;
+    text-indent: 10px;
+    height: 45px;
+    background-color: #E8E6E1;
+    border: #625D52 solid;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 250px;
+}
+
+input:focus {
+    outline: none;
+    border: #157c5a solid;
+    background-color: #f5f5f5;
+}
+
+button {
+    margin: 15px;
+    width: 80px;
+    height: 40px;
+    font-family: 'Jost', sans-serif;
+    border-radius: 10px;
+    background-color: #006644;
+    border: #147252 solid;
+    color: #FAF9F7;
+    font-size: 15px;
+    transition: ease-in-out 0.1s;
+}
+
+button:hover {
+    background-color: #157c5a;
+    scale: 1.05;
+    cursor: pointer;
+}
+
+button:active {
+    transition: ease-in-out 0.02s;
+    background-color: #006644;
+    border: #147252 solid;
+    color: #FAF9F7;
+    scale: 1;
 }
 
